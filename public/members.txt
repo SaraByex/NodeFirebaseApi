@@ -1,0 +1,146 @@
+const membersData = [
+  {
+    id: 1,
+    name: "Sarah Byekwaso",
+    username: "sbyekwaso",
+    email: "sarah1@example.com",
+    birthDate: "1992-05-14",
+    address: { street: "101 Calgary Ave", apartment: "12B", city: "Calgary", zipcode: "T2P 1J9" },
+    income: { wages: 4800, secondaryIncome: 600, interest: 200, support: 200, otherSources: 200 },
+    expenses: {
+      savings: { RRSP: 5000, Investments: 3000, Bonds: 1000, TreasuryBills: 500 },
+      paymentObligations: { creditCard: 400, loan: 300 },
+      insurance: { lifeInsurance: 100, medicalInsurance: 120 },
+      personal: { transport: 200, clothing: 150 }
+    }
+  },
+  {
+    id: 2,
+    name: "James Kimani",
+    username: "jkimani",
+    email: "james2@example.com",
+    birthDate: "1995-03-22",
+    address: { street: "45 Deerfoot Trail", apartment: "5C", city: "Calgary", zipcode: "T2A 3R6" },
+    
+  },
+  {
+    id: 3,
+    name: "Amina Yusuf",
+    username: "ayusuf",
+    email: "amina3@example.com",
+    birthDate: "1988-07-19",
+    address: { street: "78 Marlborough Rd", apartment: "8A", city: "Calgary", zipcode: "T3B 2E9" },
+    income: { wages: 5100, secondaryIncome: 400, interest: 300, support: 0, otherSources: 100 },
+    expenses: {
+      savings: { RRSP: 6000, Investments: 4000, Bonds: 1200, TreasuryBills: 700 },
+      paymentObligations: { creditCard: 450, loan: 350 },
+      insurance: { lifeInsurance: 110, medicalInsurance: 130 },
+      personal: { transport: 220, clothing: 160 }
+    }
+  },
+  {
+    id: 4,
+    name: "John Doe",
+    username: "jdoe",
+    email: "john4@example.com",
+    birthDate: "1990-11-02",
+    address: { street: "12 Heritage Blvd", apartment: "2C", city: "Calgary", zipcode: "T2C 4G6" },
+    income: { wages: 4200, secondaryIncome: 300, interest: 100, support: 50, otherSources: 50 },
+    expenses: {
+      savings: { RRSP: 3500, Investments: 2000, Bonds: 600, TreasuryBills: 400 },
+      paymentObligations: { creditCard: 250, loan: 200 },
+      insurance: { lifeInsurance: 80, medicalInsurance: 100 },
+      personal: { transport: 170, clothing: 130 }
+    }
+  },
+  {
+    id: 5,
+    name: "Emily Okello",
+    username: "eokello",
+    email: "emily5@example.com",
+    birthDate: "1993-06-10",
+    address: { street: "23 Harvest Hills", apartment: "9F", city: "Calgary", zipcode: "T2J 6P4" },
+    income: { wages: 5400, secondaryIncome: 700, interest: 150, support: 200, otherSources: 150 },
+    expenses: {
+      savings: { RRSP: 7000, Investments: 5000, Bonds: 1500, TreasuryBills: 1000 },
+      paymentObligations: { creditCard: 500, loan: 400 },
+      insurance: { lifeInsurance: 120, medicalInsurance: 140 },
+      personal: { transport: 240, clothing: 180 }
+    }
+  },
+  {
+    id: 6,
+    name: "Peter Wang",
+    username: "pwang",
+    email: "peter6@example.com",
+    birthDate: "1987-09-25",
+    address: { street: "66 Glenmore Park", apartment: "11E", city: "Calgary", zipcode: "T2N 1X7" },
+    income: { wages: 4000, secondaryIncome: 300, interest: 100, support: 50, otherSources: 50 },
+    expenses: {
+      savings: { RRSP: 3000, Investments: 1800, Bonds: 500, TreasuryBills: 300 },
+      paymentObligations: { creditCard: 200, loan: 180 },
+      insurance: { lifeInsurance: 70, medicalInsurance: 100 },
+      personal: { transport: 160, clothing: 120 }
+    }
+  },
+  {
+    id: 7,
+    name: "Grace Tumwine",
+    username: "gtumwine",
+    email: "grace7@example.com",
+    birthDate: "1991-01-05",
+    address: { street: "9 Panorama Crescent", apartment: "6A", city: "Calgary", zipcode: "T3K 5P6" },
+    income: { wages: 4600, secondaryIncome: 500, interest: 150, support: 0, otherSources: 150 },
+    expenses: {
+      savings: { RRSP: 4000, Investments: 3000, Bonds: 900, TreasuryBills: 700 },
+      paymentObligations: { creditCard: 350, loan: 300 },
+      insurance: { lifeInsurance: 100, medicalInsurance: 120 },
+      personal: { transport: 190, clothing: 140 }
+    }
+  },
+  {
+    id: 8,
+    name: "Samuel Moyo",
+    username: "smoyo",
+    email: "samuel8@example.com",
+    birthDate: "1994-04-28",
+    address: { street: "33 Sunridge Way", apartment: "10D", city: "Calgary", zipcode: "T1Y 6T7" },
+    income: { wages: 4900, secondaryIncome: 600, interest: 150, support: 100, otherSources: 100 },
+    expenses: {
+      savings: { RRSP: 5000, Investments: 3200, Bonds: 1000, TreasuryBills: 800 },
+      paymentObligations: { creditCard: 400, loan: 350 },
+      insurance: { lifeInsurance: 110, medicalInsurance: 130 },
+      personal: { transport: 210, clothing: 160 }
+    }
+  },
+  {
+    id: 9,
+    name: "Linda Nabwire",
+    username: "lnabwire",
+    email: "linda9@example.com",
+    birthDate: "1996-12-03",
+    address: { street: "14 Falconridge Dr", apartment: "4B", city: "Calgary", zipcode: "T3J 1X4" },
+    income: { wages: 4700, secondaryIncome: 400, interest: 100, support: 100, otherSources: 100 },
+    expenses: {
+      savings: { RRSP: 4500, Investments: 2800, Bonds: 950, TreasuryBills: 700 },
+      paymentObligations: { creditCard: 320, loan: 280 },
+      insurance: { lifeInsurance: 90, medicalInsurance: 110 },
+      personal: { transport: 180, clothing: 150 }
+    }
+  },
+  {
+    id: 10,
+    name: "Brian Obote",
+    username: "bobote",
+    email: "brian10@example.com",
+    birthDate: "1989-08-15",
+    address: { street: "19 Temple Drive", apartment: "1H", city: "Calgary", zipcode: "T1Y 5A2" },
+    income: { wages: 4300, secondaryIncome: 350, interest: 120, support: 80, otherSources: 50 },
+    expenses: {
+      savings: { RRSP: 3500, Investments: 2000, Bonds: 500, TreasuryBills: 300 },
+      paymentObligations: { creditCard: 270, loan: 220 },
+      insurance: { lifeInsurance: 85, medicalInsurance: 105 },
+      personal: { transport: 170, clothing: 130 }
+    }
+  }
+];
