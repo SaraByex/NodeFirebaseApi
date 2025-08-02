@@ -1,15 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Data</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My API Home</title>
+  <style href="style.css" rel="stylesheet">  </style>
 </head>
 <body>
-    <h1>MEMBER INFORMATION</h1>
-     <a href="http://localhost:3000/users" target="_blank">View Users</a><br><br>
-     <a href="http://localhost:3000/income" target="_blank">View Income</a><br><br>
-     <a href="http://localhost:3000/expenses" target="_blank">View Expenses</a><br><br>
-    
+
+  <body>
+
+<h1>MY API Documentation</h1>
+
+<section>
+  <h2>Overview</h2>
+  <p>This API manages user infoirmation, income records, and expense records with full CRUD operations. It serves JSON data through RESTful endpoints.</p>
+</section>
+<section>
+  <h2>Notes</h2>
+  <ul>
+    <li>The API responds with JSON data only.</li>
+    <li>Authentication is currently not implemented (update this if you add auth).</li>
+    <strong><li>Make sure your backend server is running (http://localhost:3000/) before making requests.</li></strong>
+  </ul>
+</section>
+
+<section>
+  <h2>API Endpoints</h2>
+
+  <h3>1. Users</h3>
+  <ul>
+    <li>
+    <strong>GET /users</strong> — 
+    <a href="http://localhost:3000/users" target="_blank">Retrieve all users</a>
+  </li>
+    <li><strong>POST /users</strong> — Create a new user.</li>
+    <li><strong>PUT /users/:id</strong> — Update a user by ID.</li>
+    <li><strong>DELETE /users/:id</strong> — Delete a user by ID.</li>
+  </ul>
+
+
+  <h3>2. Income</h3>
+  <ul>
+      <li>
+    <strong>GET /income</strong> — 
+    <a href="http://localhost:3000/income" target="_blank">Retrieve all income records</a>
+  </li>
+    <li><strong>POST /income</strong> — Create a new income record.</li>
+    <li><strong>PUT /income/:id</strong> — Update income by ID.</li>
+    <li><strong>DELETE /income/:id</strong> — Delete income by ID.</li>
+  </ul>
+
+
+  <h3>3. Expenses</h3>
+  <ul>
+     <li>
+    <strong>GET /expenses</strong> — 
+    <a href="http://localhost:3000/expenses" target="_blank">Retrieve all expense records</a>
+  </li>
+    <li><strong>POST /expenses</strong> — Create a new expense record.</li>
+    <li><strong>PUT /expenses/:id</strong> — Update expense by ID.</li>
+    <li><strong>DELETE /expenses/:id</strong> — Delete expense by ID.</li>
+  </ul>
+
+</section>
+<p>Sample users information<img src="images/users.png" alt="snapshot user information"/></p>
+<p>Sample expenses information<img src="images/expenses.png" alt="snapshot expense information"/></p>
+<p>Sample income information<img src="images/income.png" alt="snapshot income information"/></p>
+
+
+
+</section>
+
+
+
 </body>
 </html>
